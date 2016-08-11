@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="scrumApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/controllers.js"></script>
+	<style type="text/css">
+		#content{
+			min-height: 750px;
+			margin-top: -20px;
+		}
+		footer{
+			background: #00172c;
+			min-height: 150px;
+			margin-top: -30px;
+			text-align: center;
+			color: white;
+			font-size: 10px;
+		}
+		body{
+			overflow-y: hidden;
+		}
+	</style>
+</head>
+<body ng-controller="NavigateCtrl">
+	<nav class="navbar navbar-default navbar-static-top">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">Brand</a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav" id="main-nav">
+	        <li class="active" id="admin-dashboard"><a href="#/admin-dashboard" ng-click="setActive('admin-dashboard')">Ambassador Dashboard</a></li>
+	        <li id="company-dashboard"><a href="#/company-dashboard" ng-click="setActive('company-dashboard')">Company Dashboard</a></li>
+	        <li id="confirm-new-customer"><a href="#/confirm-new-customer" ng-click="setActive('confirm-new-customer')">Confirm New Customer</a></li>
+	      </ul>
+	      </div>
+		</div>
+	</nav>
+	<div id="content" class="jumbotron" ng-view></div>
+	<footer></footer>
+</div>
+</body>
+</html>
